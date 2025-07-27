@@ -9,8 +9,10 @@ public class Main {
         String n3 = "celular";
         String n4 = "coruja";
         String n5 = "pato";
+
         int tentativas1 = 3;
         int chance = 1;
+
         // Desenho de um gato
         String[] partesDesenho1 = {
                 " /\\     /\\ ",
@@ -68,6 +70,7 @@ public class Main {
             System.out.println("Voce tem " + tentativas1 + " tentativas restantes.");
             if (tentativas1 < 1) {
                 System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                return;
             }else{
                 for (int i = 0; i <= chance; i++) {
                     System.out.println(partesDesenho1[i]);
@@ -94,6 +97,7 @@ public class Main {
             System.out.println("Voce tem " + tentativas2 + " tentativas restantes.");
             if (tentativas2 < 1) {
                 System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                return;
             }else{
                 for (int i = 0; i <= chance; i++) {
                     System.out.println(partesDesenho2[i]);
@@ -121,6 +125,7 @@ public class Main {
             System.out.println("Voce tem " + tentativas3 + " tentativas restantes.");
             if (tentativas3 < 1) {
                 System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                return;
             }else{
                 for (int i = 0; i <= chance; i++) {
                     System.out.println(partesDesenho3[i]);
@@ -148,6 +153,7 @@ public class Main {
             System.out.println("Voce tem " + tentativas4 + " tentativas restantes.");
             if (tentativas4 < 1) {
                 System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                return;
             }else{
                 for (int i = 0; i <= chance; i++) {
                     System.out.println(partesDesenho4[i]);
@@ -175,6 +181,7 @@ public class Main {
             System.out.println("Voce tem " + tentativas5 + " tentativas restantes.");
             if (tentativas5 < 1) {
                 System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                return;
             }else{
                 for (int i = 0; i <= chance; i++) {
                     System.out.println(partesDesenho5[i]);
@@ -185,6 +192,8 @@ public class Main {
                 scanner.nextLine();
             }
         }
+
+        System.out.println("\n-----------------------------------------------------------------------------------------------\n");
 
         System.out.println("  #####   ######   ######    ####      ####     ##     #####     #####              ## ");
         System.out.println(" ##   ##   ##  ##   ##  ##    ##      ##  ##   ####     ## ##   ##   ##            ####");
