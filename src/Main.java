@@ -10,9 +10,6 @@ public class Main {
         String n4 = "coruja";
         String n5 = "pato";
 
-        int tentativas1 = 4;
-        int chance = 0;
-
         // Desenho de um gato
         String[] partesDesenho1 = {
                 " /\\     /\\ ",
@@ -60,11 +57,13 @@ public class Main {
 
         System.out.println("\nDesenho 1:\n");
 
-        // Verifica se a resposta do usuário está correta
+
+        int tentativas1 = 4; // uma tentativa para cada linha de desenho ASCII de 4 linhas 4 tentativas
+        int chance = 0; // variavel chance para exibir partes do desenho ASCII
 
         while (tentativas1 > 0) {
             // exibe parte do desenho de acordo com a chance
-            for (int i = 0; i <= chance && i < partesDesenho1.length; i++) {
+            for (int i = 0; i <= chance && i < partesDesenho1.length; i++) {// usando a chance para controlar quantas partes do desenho são exibidas
                 System.out.println(partesDesenho1[i]);
             }
 
@@ -78,6 +77,7 @@ public class Main {
                 chance = Math.min(chance + 1, partesDesenho1.length - 1);
                 if (tentativas1 == 0) {
                     System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
                 } else {
                     System.out.println("Resposta errada! Tentativas restantes: " + tentativas1 + "\n");
                 }
@@ -106,6 +106,7 @@ public class Main {
                 chance = Math.min(chance + 1, partesDesenho2.length - 1);
                 if (tentativas2 == 0) {
                     System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
                 } else {
                     System.out.println("Resposta errada! Tentativas restantes: " + tentativas2 + "\n");
                 }
@@ -134,6 +135,7 @@ public class Main {
                 chance = Math.min(chance + 1, partesDesenho3.length - 1);
                 if (tentativas3 == 0) {
                     System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
                 } else {
                     System.out.println("Resposta errada! Tentativas restantes: " + tentativas3 + "\n");
                 }
@@ -162,6 +164,7 @@ public class Main {
                 chance = Math.min(chance + 1, partesDesenho4.length - 1);
                 if (tentativas4 == 0) {
                     System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
                 } else {
                     System.out.println("Resposta errada! Tentativas restantes: " + tentativas4 + "\n");
                 }
@@ -190,6 +193,7 @@ public class Main {
                 chance = Math.min(chance + 1, partesDesenho5.length - 1);
                 if (tentativas5 == 0) {
                     System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
                 } else {
                     System.out.println("Resposta errada! Tentativas restantes: " + tentativas5 + "\n");
                 }
