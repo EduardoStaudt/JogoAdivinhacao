@@ -10,8 +10,8 @@ public class Main {
         String n4 = "coruja";
         String n5 = "pato";
 
-        int tentativas1 = 3;
-        int chance = 1;
+        int tentativas1 = 4;
+        int chance = 0;
 
         // Desenho de um gato
         String[] partesDesenho1 = {
@@ -64,7 +64,9 @@ public class Main {
 
         while (tentativas1 > 0) {
             // exibe parte do desenho de acordo com a chance
-            System.out.println(partesDesenho1[chance]);
+            for (int i = 0; i <= chance && i < partesDesenho1.length; i++) {
+                System.out.println(partesDesenho1[i]);
+            }
 
             System.out.print("O que eh o desenho acima? ");
             String resposta = scanner.nextLine().trim().toLowerCase();
@@ -84,13 +86,15 @@ public class Main {
 
 
         // Desenho de um cachorro
-        int tentativas2 = 4;
-        chance = 1;
+        int tentativas2 = 5;
+        chance = 0;
 
         System.out.println("\nDesenho 2:\n");
         while (tentativas2 > 0) {
             // exibe parte do desenho de acordo com a chance
-            System.out.println(partesDesenho2[chance]);
+            for (int i = 0; i <= chance && i < partesDesenho2.length; i++) {
+                System.out.println(partesDesenho2[i]);
+            }
 
             System.out.print("O que eh o desenho acima? ");
             String resposta = scanner.nextLine().trim().toLowerCase();
@@ -110,13 +114,15 @@ public class Main {
 
 
         // Desenho de um celular
-        int tentativas3 = 4;
-        chance = 1;
+        int tentativas3 = 5;
+        chance = 0;
 
         System.out.println("\nDesenho 3:\n");
         while (tentativas3 > 0) {
             // exibe parte do desenho de acordo com a chance
-            System.out.println(partesDesenho3[chance]);
+            for (int i = 0; i <= chance && i < partesDesenho3.length; i++) {
+                System.out.println(partesDesenho3[i]);
+            }
 
             System.out.print("O que eh o desenho acima? ");
             String resposta = scanner.nextLine().trim().toLowerCase();
@@ -136,13 +142,15 @@ public class Main {
 
 
         // Desenho de uma coruja
-        int tentativas4 = 3;
-        chance = 1;
+        int tentativas4 = 4;
+        chance = 0;
 
         System.out.println("\nDesenho 4:\n");
         while (tentativas4 > 0) {
             // exibe parte do desenho de acordo com a chance
-            System.out.println(partesDesenho4[chance]);
+            for (int i = 0; i <= chance && i < partesDesenho4.length; i++) {
+                System.out.println(partesDesenho4[i]);
+            }
 
             System.out.print("O que eh o desenho acima? ");
             String resposta = scanner.nextLine().trim().toLowerCase();
@@ -162,13 +170,15 @@ public class Main {
 
 
         // Desenho de um pato
-        int tentativas5 = 3;
-        chance = 1;
+        int tentativas5 = 4;
+        chance = 0;
 
         System.out.println("\nDesenho 5:\n");
         while (tentativas5 > 0) {
             // exibe parte do desenho de acordo com a chance
-            System.out.println(partesDesenho5[chance]);
+            for (int i = 0; i <= chance && i < partesDesenho5.length; i++) {
+                System.out.println(partesDesenho5[i]);
+            }
 
             System.out.print("O que eh o desenho acima? ");
             String resposta = scanner.nextLine().trim().toLowerCase();
