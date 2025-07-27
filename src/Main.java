@@ -53,7 +53,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Bem Vindo Ao Jogo de Advinhacao em Java!");
+        System.out.println("\nBem Vindo Ao Jogo de Advinhacao em Java!");
         System.out.println("O jogo consiste vc tentar adivinhar o que eh o desenho.\n");
 
         // Desenho de um gato
@@ -63,24 +63,27 @@ public class Main {
         System.out.println("O que eh o desenho acima? Digite sua resposta:");
         scanner.nextLine();
         // Verifica se a resposta do usuário está correta
-        if (scanner.nextLine().equals(n1)) {
-            System.out.println("Parabens, voce acertou!");
-        } else {
-            System.out.println("Resposta errada! Tente novamente.");
-            System.out.println("Voce tem " + tentativas1 + " tentativas restantes.");
-            if (tentativas1 < 1) {
-                System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
-                return;
-            }else{
-                for (int i = 0; i <= chance; i++) {
-                    System.out.println(partesDesenho1[i]);
+
+            if (scanner.nextLine().equals(n1)) {
+                System.out.println("Parabens, voce acertou!");
+            } else {
+                while (tentativas1 == 0 || scanner.nextLine().equals(n1)){
+                    System.out.println("Resposta errada! Tente novamente.");
+                    System.out.println("Voce tem " + tentativas1 + " tentativas restantes.");
+                    if (tentativas1 < 1) {
+                        System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                        return;
+                    }else{
+                        for (int i = 0; i <= chance && i < partesDesenho1.length; i++) {
+                            System.out.println(partesDesenho1[i]);
+                        }
+                        tentativas1--;
+                        chance++;
+                        System.out.println("O que eh o desenho acima? Digite sua resposta:");
+                        scanner.nextLine();
+                    }
                 }
-                tentativas1--;
-                chance++;
-                System.out.println("O que eh o desenho acima? Digite sua resposta:");
-                scanner.nextLine();
             }
-        }
 
         // Desenho de um cachorro
         int tentativas2 = 4;
@@ -93,26 +96,28 @@ public class Main {
         if (scanner.nextLine().equals(n2)) {
             System.out.println("Parabens, voce acertou!");
         } else {
-            System.out.println("Resposta errada! Tente novamente.");
-            System.out.println("Voce tem " + tentativas2 + " tentativas restantes.");
-            if (tentativas2 < 1) {
-                System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
-                return;
-            }else{
-                for (int i = 0; i <= chance; i++) {
-                    System.out.println(partesDesenho2[i]);
+            while (tentativas2 == 0 || scanner.nextLine().equals(n2)){
+                System.out.println("Resposta errada! Tente novamente.");
+                System.out.println("Voce tem " + tentativas2 + " tentativas restantes.");
+                if (tentativas2 < 1) {
+                    System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
+                }else{
+                    for (int i = 0; i <= chance && i < partesDesenho2.length; i++) {
+                        System.out.println(partesDesenho2[i]);
+                    }
+                    tentativas2--;
+                    chance++;
+                    System.out.println("O que eh o desenho acima? Digite sua resposta:");
+                    scanner.nextLine();
                 }
-                tentativas2--;
-                chance++;
-                System.out.println("O que eh o desenho acima? Digite sua resposta:");
-                scanner.nextLine();
             }
         }
 
         // Desenho de um celular
         int tentativas3 = 4;
         chance = 1;
-        System.out.println("Nivel 2:");
+        System.out.println("Nivel 3:");
         System.out.println("Desenho:");
         System.out.println(partesDesenho3[0]);
         System.out.println("O que eh o desenho acima? Digite sua resposta:");
@@ -121,26 +126,28 @@ public class Main {
         if (scanner.nextLine().equals(n3)) {
             System.out.println("Parabens, voce acertou!");
         } else {
-            System.out.println("Resposta errada! Tente novamente.");
-            System.out.println("Voce tem " + tentativas3 + " tentativas restantes.");
-            if (tentativas3 < 1) {
-                System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
-                return;
-            }else{
-                for (int i = 0; i <= chance; i++) {
-                    System.out.println(partesDesenho3[i]);
+            while (tentativas3 == 0 || scanner.nextLine().equals(n3)){
+                System.out.println("Resposta errada! Tente novamente.");
+                System.out.println("Voce tem " + tentativas3 + " tentativas restantes.");
+                if (tentativas3 < 1) {
+                    System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
+                }else{
+                    for (int i = 0; i <= chance && i < partesDesenho3.length; i++) {
+                        System.out.println(partesDesenho3[i]);
+                    }
+                    tentativas3--;
+                    chance++;
+                    System.out.println("O que eh o desenho acima? Digite sua resposta:");
+                    scanner.nextLine();
                 }
-                tentativas3--;
-                chance++;
-                System.out.println("O que eh o desenho acima? Digite sua resposta:");
-                scanner.nextLine();
             }
         }
 
         // Desenho de uma coruja
         int tentativas4 = 3;
         chance = 1;
-        System.out.println("Nivel 2:");
+        System.out.println("Nivel 4:");
         System.out.println("Desenho:");
         System.out.println(partesDesenho4[0]);
         System.out.println("O que eh o desenho acima? Digite sua resposta:");
@@ -149,26 +156,28 @@ public class Main {
         if (scanner.nextLine().equals(n4)) {
             System.out.println("Parabens, voce acertou!");
         } else {
-            System.out.println("Resposta errada! Tente novamente.");
-            System.out.println("Voce tem " + tentativas4 + " tentativas restantes.");
-            if (tentativas4 < 1) {
-                System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
-                return;
-            }else{
-                for (int i = 0; i <= chance; i++) {
-                    System.out.println(partesDesenho4[i]);
+            while (tentativas4 == 0 || scanner.nextLine().equals(n4)){
+                System.out.println("Resposta errada! Tente novamente.");
+                System.out.println("Voce tem " + tentativas4 + " tentativas restantes.");
+                if (tentativas4 < 1) {
+                    System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
+                }else{
+                    for (int i = 0; i <= chance && i < partesDesenho4.length; i++) {
+                        System.out.println(partesDesenho4[i]);
+                    }
+                    tentativas4--;
+                    chance++;
+                    System.out.println("O que eh o desenho acima? Digite sua resposta:");
+                    scanner.nextLine();
                 }
-                tentativas4--;
-                chance++;
-                System.out.println("O que eh o desenho acima? Digite sua resposta:");
-                scanner.nextLine();
             }
         }
 
         // Desenho de um pato
         int tentativas5 = 3;
         chance = 1;
-        System.out.println("Nivel 2:");
+        System.out.println("Nivel 5:");
         System.out.println("Desenho:");
         System.out.println(partesDesenho5[0]);
         System.out.println("O que eh o desenho acima? Digite sua resposta:");
@@ -177,19 +186,21 @@ public class Main {
         if (scanner.nextLine().equals(n5)) {
             System.out.println("Parabens, voce acertou!");
         } else {
-            System.out.println("Resposta errada! Tente novamente.");
-            System.out.println("Voce tem " + tentativas5 + " tentativas restantes.");
-            if (tentativas5 < 1) {
-                System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
-                return;
-            }else{
-                for (int i = 0; i <= chance; i++) {
-                    System.out.println(partesDesenho5[i]);
+            while (tentativas5 == 0 || scanner.nextLine().equals(n5)){
+                System.out.println("Resposta errada! Tente novamente.");
+                System.out.println("Voce tem " + tentativas5 + " tentativas restantes.");
+                if (tentativas5 < 1) {
+                    System.out.println("Voce perdeu todas as tentativas. O jogo acabou.");
+                    return;
+                }else{
+                    for (int i = 0; i <= chance && i < partesDesenho5.length; i++) {
+                        System.out.println(partesDesenho5[i]);
+                    }
+                    tentativas5--;
+                    chance++;
+                    System.out.println("O que eh o desenho acima? Digite sua resposta:");
+                    scanner.nextLine();
                 }
-                tentativas5--;
-                chance++;
-                System.out.println("O que eh o desenho acima? Digite sua resposta:");
-                scanner.nextLine();
             }
         }
 
